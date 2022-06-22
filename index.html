@@ -10,6 +10,10 @@ html {
     font-family: 'Arial', sans-serif;
 }
 
+body {
+	margin-top: 125px;
+}
+
 header {
 	background-color: #276FBF;
     margin-top: 0;
@@ -39,6 +43,8 @@ header {
 
 .main-nav ul {
 	list-style: none;
+    position: relative;
+    top: 5px;
 }
 
 .main-nav ul li {
@@ -68,6 +74,22 @@ header {
 
 .grey {
 	color: #bbb;
+}
+
+.sidebar {
+	border:1px solid #ddd;
+    padding: 25px 15px;
+    border-radius: 5px;
+    margin: 0px 25px;
+    box-shadow: 1px 1px 10px #eee;
+    text-align: center;
+    width: 25vw;
+    max-width: 300px;
+    height: 50vh;
+}
+
+.profile-img {
+	border-radius: 100%;
 }</style></head>
     <body>
         <header>
@@ -84,8 +106,8 @@ header {
             </nav>
         </header>
         <section class="wrapper">
-            <aside>
-                <img src="https://via.placeholder.com/150" alt="profile image" title="profile image">
+            <aside class="sidebar">
+                <img src="https://via.placeholder.com/150" alt="profile image" title="profile image" class="profile-img">
                 <h2>Some User</h2>
                 <p>Some details about the user here. This is the bio...</p>
             </aside>
