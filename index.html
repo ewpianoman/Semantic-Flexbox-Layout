@@ -1,15 +1,85 @@
 <!DOCTYPE html> <html><head>
         <title>Semantic Flexbox Layout</title>
-    <style></style></head>
+    <style>html, body {
+	margin: 0;
+    padding: 0;
+}
+
+html {
+	font-size: 14px;
+    font-family: 'Arial', sans-serif;
+}
+
+header {
+	background-color: #276FBF;
+    margin-top: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 2vw;
+    padding-right: 2vw;
+}
+
+.site-branding {
+	display: flex;
+    justify-content: flex-start;
+}
+
+.branding {
+	margin-right: 10px;
+}
+
+.tagline {
+	position: relative;
+    top: 10px;
+}
+
+.main-nav ul {
+	list-style: none;
+}
+
+.main-nav ul li {
+	display: inline-block;
+    padding: 5px;
+}
+
+.main-nav a {
+    text-decoration: none;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.active {
+	border-bottom: 2px solid #F6F4F3;
+    font-weight: bold;
+}
+
+.wrapper {
+	display: flex;
+    justify-content: center;
+}
+
+.white {
+	color: #F6F4F3;
+}
+
+.grey {
+	color: #bbb;
+}</style></head>
     <body>
         <header>
-            <h1>Facefriend Book</h1>
-            <h3>Where friendly faces greet you.</h3>
-            <nav>
+            <div class="site-branding">
+            	<h1 class="white branding">Facefriend Book</h1>
+            	<h3 class="grey tagline">Where friendly faces greet you.</h3>
+            </div>
+            <nav class="main-nav">
             	<ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Profile</a></li>
-                    <li><a href="#">Stream</a></li>
+                    <li><a href="#" class="white active">Home</a></li>
+                    <li><a href="#" class="white">Profile</a></li>
+                    <li><a href="#" class="white">Stream</a></li>
                 </ul>
             </nav>
         </header>
